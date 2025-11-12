@@ -1,0 +1,128 @@
+.login-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary-500) 0%, var(--primary-700) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+}
+
+.login-card {
+  background: white;
+  padding: var(--space-8);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid var(--secondary-200);
+}
+
+[data-theme="dark"] .login-card {
+  background: var(--secondary-100);
+  border-color: var(--secondary-200);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.login-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--secondary-900);
+  margin-bottom: var(--space-2);
+}
+
+.login-subtitle {
+  color: var(--secondary-600);
+  font-size: var(--font-size-sm);
+}
+
+.login-form {
+  margin-bottom: var(--space-6);
+}
+
+.form-group {
+  margin-bottom: var(--space-4);
+}
+
+.form-label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--secondary-700);
+  margin-bottom: var(--space-2);
+}
+
+.form-input {
+  width: 100%;
+  padding: var(--space-3);
+  border: 1px solid var(--secondary-300);
+  border-radius: var(--radius);
+  font-size: var(--font-size-base);
+  transition: var(--transition);
+  background: white;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+[data-theme="dark"] .form-input {
+  background: var(--secondary-50);
+  border-color: var(--secondary-300);
+  color: var(--secondary-900);
+}
+
+.login-button {
+  width: 100%;
+  margin-top: var(--space-4);
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  margin: var(--space-6) 0;
+  color: var(--secondary-500);
+  font-size: var(--font-size-sm);
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--secondary-300);
+}
+
+.login-divider span {
+  padding: 0 var(--space-4);
+}
+
+.demo-button {
+  width: 100%;
+}
+
+.login-footer {
+  margin-top: var(--space-6);
+  text-align: center;
+}
+
+.footer-text {
+  font-size: var(--font-size-xs);
+  color: var(--secondary-500);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .login-container {
+    padding: var(--space-4);
+  }
+  
+  .login-card {
+    padding: var(--space-6);
+  }
+}

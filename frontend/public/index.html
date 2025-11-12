@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- ... -->
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <!-- Fix pour ResizeObserver -->
+    <script>
+      const resizeObserverLoopErr = () => {
+        const resizeObserverErr = document.createElement('div');
+        resizeObserverErr.style.cssText = 'position:fixed;top:0;left:0;z-index:9999;background:#f00;color:#fff;padding:10px;font-size:12px;';
+        resizeObserverErr.innerHTML = 'ResizeObserver error - ignoring';
+        document.body.appendChild(resizeObserverErr);
+        
+        setTimeout(() => {
+          document.body.removeChild(resizeObserverErr);
+        }, 3000);
+      };
+      
+      window.addEventListener('error', (e) => {
+        if (e.message.includes('ResizeObserver')) {
+          e.preventDefault();
+          resizeObserverLoopErr();
+        }
+      });
+    </script>
+  </body>
+</html>
