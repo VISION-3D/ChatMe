@@ -1,18 +1,19 @@
 {
   "version": 2,
-  "name": "chatme-app",
-  "buildCommand": "cd frontend && npm run build",
-  "outputDirectory": "frontend/build",
-  "installCommand": "cd frontend && npm install", 
-  "framework": "create-react-app",
-  "routes": [
+  "name": "chatme-app", 
+  "builds": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
     }
   ],
-  "env": {
-    "REACT_APP_API_URL": "https://api.chatme-app.com",
-    "REACT_APP_SOCKET_URL": "wss://chatme-socket.com"
-  }
+  "routes": [
+    {
+      "src": "/(.*)", 
+      "dest": "/index.html"
+    }
+  ]
 }
