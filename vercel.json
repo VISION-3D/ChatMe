@@ -1,9 +1,9 @@
 {
   "version": 2,
-  "name": "chatme-app", 
+  "name": "chatme-app",
   "builds": [
     {
-      "src": "frontend/package.json",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "build"
@@ -12,7 +12,7 @@
   ],
   "routes": [
     {
-      "src": "/(.*)", 
+      "src": "/(.*)",
       "dest": "/index.html"
     }
   ]
