@@ -1,6 +1,5 @@
 {
   "name": "frontend",
-  "proxy": "http://localhost:5000",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,23 +12,17 @@
   },
   "scripts": {
     "start": "npx react-scripts start",
-    "dev": "npx react-scripts start",
     "build": "npx react-scripts build",
     "test": "npx react-scripts test",
     "eject": "npx react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "npx vercel --prod",
-    "deploy:preview": "npx vercel"
+    "deploy": "npx vercel --prod"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
-    ],
-    "rules": {
-      "react-hooks/exhaustive-deps": "off",
-      "jsx-a11y/img-redundant-alt": "off"
-    }
+    ]
   },
   "browserslist": {
     "production": [
@@ -42,9 +35,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-jsx-a11y": "^6.7.1"
   }
 }
