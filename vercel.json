@@ -1,15 +1,10 @@
 {
   "version": 2,
   "name": "chatme-app",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
-    }
-  ],
+  "buildCommand": "cd frontend && npm run build",
+  "outputDirectory": "frontend/build",
+  "installCommand": "cd frontend && npm install", 
+  "framework": "create-react-app",
   "routes": [
     {
       "src": "/(.*)",
